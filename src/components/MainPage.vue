@@ -15,8 +15,10 @@
         <figcaption v-else-if="image.caption">{{ image.caption }}</figcaption>
       </figure>
     </div>
+
     <div :style="modalDisplay">
-      <img :src="modalImg">
+      <button @click="closeModal()" id="close-modal">Close</button>
+      <img :src="modalImg" id="modal-img">
     </div>
 
   </div>
@@ -34,7 +36,7 @@
         quote: null,
         images: null,
         modalDisplay: "display: none",
-        modalImg: "pic1.jpg",
+        modalImg: null,
         loading: true,
         errored: false
       }
@@ -51,9 +53,12 @@
           this.loadImages(image.album)
         }
         else {
-          this.modalDisplay = "display: flex",
+          this.modalDisplay = "display: block; position: absolute; z-index: 1; left: 10px; top: 10px; right: 10px",
           this.modalImg = image.img
         }
+      },
+      closeModal: function() {
+        this.modalDisplay = "display: none";
       },
       loadImages: function (uri) {
         axios.get(uri)
@@ -75,9 +80,15 @@
 </script>
 
 <style>
-  .modal {
-    display: None;
-    z-index: 1;
+  #modal-img {
+     max-width: 100%;
+     height: auto;
+  }
+
+  #close-modal {
+    position: absolute;
+    left: 100%;
+    transform: translate(-100%);
   }
 
   @media screen and (max-width: 1279px) {
