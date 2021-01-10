@@ -16,7 +16,7 @@
       </figure>
     </div>
 
-    <div :style="modalDisplay">
+    <div :style="modalDisplay" id="modal-display">
       <button @click="closeModal()" id="close-modal">Close</button>
       <img :src="modalImg" id="modal-img">
     </div>
@@ -53,7 +53,7 @@
           this.loadImages(image.album)
         }
         else {
-          this.modalDisplay = "display: block; position: absolute; z-index: 1; left: 10px; top: 10px; right: 10px",
+          this.modalDisplay = "display: block",
           this.modalImg = image.img
         }
       },
@@ -80,6 +80,29 @@
 </script>
 
 <style>
+@media screen and (min-width: 1081px) {
+  #modal-display {
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+  }
+}
+  @media screen and (max-width: 1080px) {
+    #modal-display {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      right: 10px;
+      z-index: 1;
+      height: 0px;
+      width: 0px
+
+    }
+  }
+
+
   #modal-img {
      max-width: 100%;
      height: auto;
