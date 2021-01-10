@@ -6,7 +6,8 @@
         {   
             "album": "https://partyfowl.github.io/mock-api-response-2.json",
             "img": "pic1.jpg",
-            "caption": "Brandy"
+            "caption": "NYE 2019",
+            "date": "2018-12-31"
         },
         {
             "img": "pic2.jpg",
