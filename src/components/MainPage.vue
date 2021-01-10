@@ -11,8 +11,8 @@
     <div id="albums">
       <figure class="album" v-for="image in images" :key="image.img">
         <div @click="route(image)" class="img-container" :style="{ backgroundImage: 'url(\'' + image.img + '\')' }"></div>
-        <figcaption v-if="image.caption && image.date">{{ image.caption }} ({{ image.date }})</figcaption>
-        <figcaption v-else-if="image.caption">{{ image.caption }}</figcaption>
+        <figcaption v-if="image.title && image.date">{{ image.title }} ({{ image.date }})</figcaption>
+        <figcaption v-else-if="image.caption">{{ image.title }}</figcaption>
       </figure>
     </div>
 
@@ -46,7 +46,7 @@
     },
     methods: {
       home: function () {
-        this.loadImages('https://partyfowl.github.io/mock-api-response.json')
+        this.loadImages('https://5yajp71qpk.execute-api.eu-west-1.amazonaws.com/Prod/')
       },
       route: function(image){
         if (image.album){
