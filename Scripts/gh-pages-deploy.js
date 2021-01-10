@@ -10,6 +10,7 @@ const fs = require("fs");
     // Understand if it's dist or build folder
     const folderName = fs.existsSync("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
+    await execa("git", ["add", "pic1.jpg", "pic2.jpg", "pic3.jpg", "mock-api-response.json", "mock-api-response-2.json"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
     console.log("Pushing to gh-pages...");
     await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
