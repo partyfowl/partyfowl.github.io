@@ -5,17 +5,17 @@
     "images": [
         {   
             "album": "https://partyfowl.github.io/mock-api-response-2.json",
-            "img": "pic1.jpg",
+            "img": "https://partyfowl.github.io/pic1.jpg",
             "caption": "NYE 2019",
             "date": "2018-12-31"
         },
         {
-            "img": "pic2.jpg",
+            "img": "https://partyfowl.github.io/pic2.jpg",
             "caption": "Brandy",
             "date": "Date Unknown"
         },
         {
-            "img": "pic3.jpg",
+            "img": "https://partyfowl.github.io/pic3.jpg",
             "caption": "Big Bear",
             "date": "November 2020"
         }

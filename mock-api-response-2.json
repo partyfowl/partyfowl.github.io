@@ -4,13 +4,13 @@
     "quote": "Quite a good day, all things considered.",
     "images": [
         {
-            "img": "pic3.jpg"
+            "img": "https://partyfowl.github.io/pic3.jpg"
         },
         {
-            "img": "pic1.jpg"
+            "img": "https://partyfowl.github.io/pic1.jpg"
         },
         {
-            "img": "pic3.jpg"
+            "img": "https://partyfowl.github.io/pic3.jpg"
         }
     ]
 }
